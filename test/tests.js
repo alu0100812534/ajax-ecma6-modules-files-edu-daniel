@@ -1,45 +1,47 @@
-var expect = chai.expect;
+var expect = chai.expect
 
-describe("CSV", function() {
-    describe("Calculate", function() {
-    
-     it("Deberia aceptar una entrada de una única linea", function() {
-        var input = '1, 2, 3';
-        var r = calculate(input);
-        expect(r[0].items.toString()).to.equal('1,2,3');
-     });
-     
-     it("Deberia aceptar una entrada con comillas", function() {
-        var input = '"producto",     "precio"';
-        var r = calculate(input);
-        expect(r[0].items.toString()).to.equal('producto,precio');
-     });
-     
-     it("Deberia aceptar una entrada con parametros vacios", function(){
-        var input = '      ,    "4,3", ';
-        var r = calculate(input);
-        expect(r[0].items.toString()).to.equal('      ,4,3,');
-     });
-     
-     it("Deberia aceptar una entrada con 2 lineas", function(){
-        var input = '      ,    "4,3",  \n 1, 2, 3';
-        var r = calculate(input);
-        expect(r[0].items.toString()).to.equal('      ,4,3,');
-        expect(r[1].items.toString()).to.equal('1,2,3');
-     });
-     
-     it("Deberia aceptar una entrada con 2 lineas y numero de argumentos distintos", function(){
-        var input = '"4,3",  \n 1, 2, 3';
-        var r = calculate(input);
-        expect(r[0].items.toString()).to.equal('4,3,');
-        expect(r[1].items.toString()).to.equal('1,2,3');
-     });
-     
-     it("Deberia aceptar una entrada vacia", function(){
-        var input = '  ,  , ';
-        var r = calculate(input);
-        expect(r[0].items.toString()).to.equal('  ,');
-     });
-     
-    }); 
- });
+describe("PRUEBAS CSV", function () {
+  describe("Pruebas para la función calculate()", function() {
+    it("Entrada con elementos entrecomillados", function() {
+      var input = '"Esto", "son", "elementos", "entrecomillados"';
+      var fun_cal = calculate(input);
+      expect(fun_cal[0].items.toString()).to.equal('Esto,son,elementos,entrecomillados');
+    });
+
+    it ("Entrada con elementos no entrecomillados", function() {
+      var input = 'Esto, son, elementos, no, entrecomillados'
+      var fun_cal = calculate(input);
+      expect(fun_cal[0].items.toString()).to.equal('Esto,son,elementos,no,entrecomillados');
+    });
+
+    it ("Entrada con un elemento vacío", function() {
+      var input = '"Elemento", "vacío", ""'
+      var fun_cal = calculate(input);
+      expect(fun_cal[0].items.toString()).to.equal('Elemento,vacío,');
+    });
+
+    it ("Entrada con números entrecomillados", function() {
+      var input = '"0", "1", "2", "3"';
+      var fun_cal = calculate(input);
+      expect(fun_cal[0].items.toString()).to.equal('0,1,2,3');
+    });
+
+    it ("Entrada con números no entrecomillados", function() {
+      var input = '0, 1, 2, 3';
+      var fun_cal = calculate(input);
+    expect(fun_cal[0].items.toString()).to.equal('0,1,2,3');    
+    });
+
+    it("Entrada como una coma en uno de los elementos", function() {
+      var input = '"Hay", "una,", "coma"';
+      var fun_cal = calculate(input);
+      expect(fun_cal[0].items.toString()).to.equal('Hay,una,,coma');
+    });
+
+    it("Entrada con un espacio en uno de los elementos", function() {
+      var input = '"Hay", "un ", "espacio"';
+      var fun_cal = calculate(input);
+      expect(fun_cal[0].items.toString()).to.equal('Hay,un ,espacio');
+    });
+  });
+});
