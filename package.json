@@ -4,7 +4,10 @@
   "description": "Analizador de cadenas csv usando AJAX",
   "main": "csv.js",
   "scripts": {
-     "test": "firefox tests/index.html"
+    "test": "gulp tests",
+    "start": "node app.js",
+    "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o tests/chai.js",
+    "mocha": "curl https://raw.githubusercontent.com/mochajs/mocha/master/mocha.js -o tests/mocha.js && curl https://raw.githubusercontent.com/mochajs/mocha/master/mocha.css -o tests/mocha.css"
   },
   "repository": {
     "type": "git",
