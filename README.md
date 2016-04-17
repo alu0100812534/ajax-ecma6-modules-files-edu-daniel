@@ -1,40 +1,32 @@
-# Práctica 2: Comma separated values (CSV) with AJAX
+#ETSII ULL Grado de Informatica 
+#Práctica:
 
-## jQuery.get( url [, data ] [, success ] [, dataType ] )
-* url
-  * Type: String
-  * A string containing the URL to which the request is sent.
-* data
-  * Type: PlainObject or String
-  * A plain object or string that is sent to the server with the request.
-* success
-  * Type: Function( PlainObject data, String textStatus, jqXHR jqXHR )
-  * A callback function that is executed if the request succeeds. 
-    Required if `dataType` is provided, but you can use `null` or `jQuery.noop` as a placeholder.
-* dataType
-  * Type: String
-  * The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
+#Comma Separated Values
 
-## jQuery.get( [settings ] )
-* settings
-  * Type: PlainObject
-  * A set of key/value pairs that configure the Ajax request. 
-  * All properties except for `url` are optional. 
-  * A default can be set for any option with `$.ajaxSetup()`.
+For more information look at:
 
-This is a shorthand Ajax function, which is equivalent to:
+* La sección *Práctica: Comma Separated Values. CSV* de los [apuntes](http://crguezl.github.io/pl-html/node11.html)
+* La [descripción de la práctica](https://casianorodriguezleon.gitbooks.io/pl1516/content/practicas/csv.html)
+* See it working at [CSV en GitHub Pages](http://crguezl.github.io/csv/)
+* See also [CSV](http://en.wikipedia.org/wiki/Comma-separated_values) at Wikipedia.
 
-```javascript
-$.ajax({
-  url: url,
-  data: data,
-  success: success,
-  dataType: dataType
-});
-```
+#### **¡NECESARIO EJECUTAR npm install PARA INCLUIR DEPENDENCIAS!**
 
-The success callback function is passed the returned data, which will be an XML root element, text string, JavaScript file, or JSON object, depending on the MIME type of the response. It is also passed the text status of the response.
+##### Realizada por Daniel Antonio Fernández Pérez y Eduardo Escobar Alberto (Equipo edu-daniel)
 
-# Heroku 
-https://cvsajax.herokuapp.com/
+**Campus Virtual de la Asignatura**
 
+* [Procesadores de Lenguajes](https://campusvirtual.ull.es/1516/course/view.php?id=178)
+
+**Repositorio GitHub**
+
+* [Repositorio](https://github.com/alu0100825985/localstorage-jquery-underscore-express-sass-heroku-edu-daniel)
+
+**GitHub Page de la Práctica**
+
+* [GitHub Page](http://alu0100825985.github.io/localstorage-jquery-underscore-express-sass-heroku-edu-daniel/)
+
+**Páginas Personales de los Autores**
+
+* [Página Personal de alu0100825985](http://alu0100825985.github.io./)
+* [Página Personal de alu0100812534](http://alu0100812534.github.io./)
