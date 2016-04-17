@@ -1,14 +1,7 @@
 #ETSII ULL Grado de Informatica 
 #Práctica:
 
-#Comma Separated Values
-
-For more information look at:
-
-* La sección *Práctica: Comma Separated Values. CSV* de los [apuntes](http://crguezl.github.io/pl-html/node11.html)
-* La [descripción de la práctica](https://casianorodriguezleon.gitbooks.io/pl1516/content/practicas/csv.html)
-* See it working at [CSV en GitHub Pages](http://crguezl.github.io/csv/)
-* See also [CSV](http://en.wikipedia.org/wiki/Comma-separated_values) at Wikipedia.
+# Comma separated values (CSV) with AJAX
 
 #### **¡NECESARIO EJECUTAR npm install PARA INCLUIR DEPENDENCIAS!**
 
@@ -20,11 +13,11 @@ For more information look at:
 
 **Repositorio GitHub**
 
-* [Repositorio](https://github.com/alu0100825985/localstorage-jquery-underscore-express-sass-heroku-edu-daniel)
+* [Repositorio](https://github.com/alu0100825985/ajax-ecma6-modules-files-edu-daniel/)
 
 **GitHub Page de la Práctica**
 
-* [GitHub Page](http://alu0100825985.github.io/localstorage-jquery-underscore-express-sass-heroku-edu-daniel/)
+* [GitHub Page](http://alu0100825985.github.io/ajax-ecma6-modules-files-edu-daniel/)
 
 **Páginas Personales de los Autores**
 
