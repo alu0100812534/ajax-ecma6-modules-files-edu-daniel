@@ -11,7 +11,8 @@
   <div id="fixtures"></div>
   <script src="test/mocha.js"></script>
   <script src="test/chai.js"></script>
-  <script src="test/blanket.min.js"></script>
+  <script src="test/blanket.min.js"
+        data-cover-adapter="test/mocha-blanket.js" data-cover-flags="debug"></script>
   <script src="public/csv.js" data-cover></script>
   <script src="test/calculate_t.js" data-cover></script>
   <script type="text/javascript" src="http://xregexp.com/v/3.1.0/xregexp-all.js"></script>
