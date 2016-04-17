@@ -28,7 +28,7 @@
     "express-ejs-layouts": "^2.1.0"
   },
   "devDependencies": {
-    "express-ejs-layouts": "^2.1.0",
+
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.3",
@@ -52,8 +52,5 @@
     "phantomjs-prebuilt": "^2.1.7",
     "sinon": "^1.17.3",
     "supervisor": "^0.10.0"
-  },
-  "engines": {
-    "node": "4.4.3"
   }
 }
