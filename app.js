@@ -1,10 +1,9 @@
+"use esversion: 6";
 
-//"use strict";
-
-const express = require('express');
-const app = express();
-const path = require('path');
-const expressLayouts = require('express-ejs-layouts');
+express = require('express');
+app = express();
+path = require('path');
+expressLayouts = require('express-ejs-layouts');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -14,19 +13,15 @@ app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
 
-const calculate = require('./models/calculate.js');
+calculate = require('./models/calculate');
 
 app.get('/', (request, response) => {
-    response.render('index', { title: 'CSV' });
+	response.render('index', {title: 'CSV Analizer'});
 });
 
-app.get('/csv', (request, response) => {
-  response.send ({"rows": calculate(request.query.input)});
+app.get('/csv', (request, response) => { //
+	response.send({"rows": calculate(request.query.input)}); // Solo se envian los datos necesarios, no una vista de ahi a que no se use render
 });
-
-/*app.get('/test', (request, response) => {
-  response.render('test', { title: 'Tests' });
-});*/
 
 app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
