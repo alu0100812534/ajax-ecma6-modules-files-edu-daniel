@@ -1,4 +1,4 @@
-#ETSII ULL Grado de Informatica 
+﻿#ETSII ULL Grado de Informatica 
 #Práctica:
 
 # Comma separated values (CSV) with AJAX
@@ -7,6 +7,8 @@
 
 ##### Realizada por Daniel Antonio Fernández Pérez y Eduardo Escobar Alberto (Equipo edu-daniel)
 
+** Travis **
+[![Build Status](https://travis-ci.org/alu0100812534/ajax-ecma6-modules-files-edu-daniel.svg?branch=master)](https://travis-ci.org/alu0100812534/ajax-ecma6-modules-files-edu-daniel)
 **Heroku**
 
 * [App](https://ajax-ecma6-modules-edu-daniel.herokuapp.com/)
