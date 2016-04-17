@@ -1,6 +1,4 @@
 language: node_js
-before_install:
-  - npm rebuild
 node_js:
   - "0.10"
 before_script:
