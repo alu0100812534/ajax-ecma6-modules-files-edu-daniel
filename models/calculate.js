@@ -1,8 +1,8 @@
 (() => {
 "use strict";
 
-const regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g;
-const calculate = (original) => {
+const regexp = /((?:[^"\\]\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
+let calculate = (original) => {
     let lines = original.split(/\n+\s*/);
     let commonLength = lines[0].match(regexp).length;
     let r = [];
@@ -20,7 +20,7 @@ const calculate = (original) => {
       let error = false;
 
       // skip empty lines and comments
-      if (temp.match(/(^\s*$)|(^#.*)/)) continue;
+      if (temp.match(/(^\s*$)|(^#.*)/)) continue; 
       if (m) {
         result = m.map(removeQuotes);
         error = (commonLength != m.length);
@@ -35,5 +35,5 @@ const calculate = (original) => {
     return r;
   };
 
-module.exports = XXXXXXXXXX
+module.exports = calculate;
 })();
